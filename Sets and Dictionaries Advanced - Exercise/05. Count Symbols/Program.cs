@@ -1,0 +1,28 @@
+﻿namespace _05._Count_Symbols
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] input = Console.ReadLine()
+                .ToCharArray();
+            SortedDictionary<char, int> charCounter = new();
+            foreach (char c in input)
+            {
+                if (charCounter.ContainsKey(c))
+                {
+                    charCounter[c]++;
+                }
+                else
+                {
+                    charCounter.Add(c,1);
+                }
+            }
+
+            foreach (var c in charCounter.Keys)
+            {
+                Console.WriteLine($"{c}: {charCounter[c]} time/s");
+            }
+        }
+    }
+}
