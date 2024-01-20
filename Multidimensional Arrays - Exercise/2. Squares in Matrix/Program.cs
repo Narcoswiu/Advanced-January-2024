@@ -17,22 +17,26 @@
 
             for (int row = 0; row < rows; row++)
             {
-                int[] numbers = Console.ReadLine()
+                string[] numbers = Console.ReadLine()
                     .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                    .Select(int.Parse).ToArray();
+                    .ToArray();
                 if (row > 0)
                 {
                     for (int col = 0; col < cols - 1; col++)
                     {
                         if (numbers[col] == previousRow[col] 
-                            &&previousRow[col+1]== numbers[col] 
-                            && numbers[col + 1] == previousRow[col])
+                            && previousRow[col + 1] == numbers[col+1] == (numbers[col] == previousRow[col])
+                            )
                         {
-
+                            squaresFound++;
                         }
                     }
                 }
+
+                previousRow = numbers;
             }
+
+            Console.WriteLine(squaresFound);
         }
     }
 }
