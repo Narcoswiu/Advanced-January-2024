@@ -1,19 +1,31 @@
-﻿namespace CopyDirectory
+﻿namespace CopyBinaryFile
 {
     using System;
-    public class CopyDirectory
+
+    public class CopyBinaryFile
     {
         static void Main()
         {
-            string inputPath = @$"{Console.ReadLine()}";
-            string outputPath = @$"{Console.ReadLine()}";
+            string inputFilePath = @"..\..\..\copyMe.png";
+            string outputFilePath = @"..\..\..\copyMe-copy.png";
 
-            CopyAllFiles(inputPath, outputPath);
+            CopyFile(inputFilePath, outputFilePath);
         }
 
-        public static void CopyAllFiles(string inputPath, string outputPath)
+        public static void CopyFile(string inputFilePath, string outputFilePath)
         {
-            throw new NotImplementedException();
+            using (FileStream input = new FileStream(inputFilePath, FileMode.Open, FileAccess.Read))
+            {
+                using (FileStream outputStream = new FileStream(outputFilePath, FileMode.Create, FileAccess.Write))
+                {
+                    byte[] buffer = new byte[4096];
+                    int bytesRead;
+                    while ((bytesRead = input.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        outputStream.Write(buffer, 0, bytesRead);
+                    }
+                }
+            }
         }
     }
 }
