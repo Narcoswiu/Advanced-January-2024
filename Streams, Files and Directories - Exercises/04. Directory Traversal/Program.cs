@@ -1,27 +1,35 @@
-﻿namespace DirectoryTraversal
+﻿using System.IO;
+
+namespace CopyDirectory
 {
     using System;
-    public class DirectoryTraversal
+
+    public class CopyDirectory
     {
         static void Main()
         {
-            string path = Console.ReadLine();
-            string reportFileName = @"\report.txt";
+            string inputPath = @$"{Console.ReadLine()}";
+            string outputPath = @$"{Console.ReadLine()}";
 
-            string reportContent = TraverseDirectory(path);
-            Console.WriteLine(reportContent);
-
-            WriteReportToDesktop(reportContent, reportFileName);
+            CopyAllFiles(inputPath, outputPath);
         }
 
-        public static string TraverseDirectory(string inputFolderPath)
+        public static void CopyAllFiles(string inputPath, string outputPath)
         {
-            throw new NotImplementedException();
-        }
+            if (Directory.Exists(outputPath))
+            {
+                Directory.Delete(outputPath);
+            }
+            Directory.CreateDirectory(outputPath);
 
-        public static void WriteReportToDesktop(string textContent, string reportFileName)
-        {
-            throw new NotImplementedException();
+            string[] files = Directory.GetFiles(inputPath);
+            foreach (string file in files)
+            {
+                string fileName = Path.GetFileName(file);
+                string destination = Path.Combine(outputPath, fileName);
+                File.Copy(file, destination);
+            }
+
         }
     }
 }
