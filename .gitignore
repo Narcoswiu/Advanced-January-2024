@@ -361,3 +361,15 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/Functional Programming - Exercise/01. Action Print/01. Action Print.csproj
+/Functional Programming - Exercise/02. Knights of Honor/02. Knights of Honor.csproj
+/Functional Programming - Exercise/03. Custom Min Function/03. Custom Min Function.csproj
+/Functional Programming - Exercise/04. Find Evens or Odds/04. Find Evens or Odds.csproj
+/Functional Programming - Exercise/05. Applied Arithmetics/05. Applied Arithmetics.csproj
+/Functional Programming - Exercise/06. Reverse And Exclude/06. Reverse And Exclude.csproj
+/Functional Programming - Exercise/07. Predicate For Names/07. Predicate For Names.csproj
+/Functional Programming - Exercise/08. List Of Predicates/08. List Of Predicates.csproj
+/Functional Programming - Exercise/09. Predicate Party!/09. Predicate Party!.csproj
+/Functional Programming - Exercise/10. The Party Reservation Filter Module/10. The Party Reservation Filter Module.csproj
+/Functional Programming - Exercise/11. TriFunction/11. TriFunction.csproj
+/Functional Programming - Exercise/Functional Programming - Exercise.sln
