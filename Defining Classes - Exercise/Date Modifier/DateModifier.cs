@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DateDifference
+namespace Date_Modifier
 {
     public  class DateModifier
     {

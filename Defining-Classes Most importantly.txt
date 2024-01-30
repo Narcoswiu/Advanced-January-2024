@@ -1,0 +1,23 @@
+public <nameOfTheClass> 
+{
+  //Fields
+  private <type> <name> ;
+  All field answer to property!!
+  //Property
+  public <type> <name> { get; set; }
+//Constructor 
+ public <nameOfTheClass> (Parameters)
+ : this(/*Тук можеш да подадеш параметрите на стария конструктор, ако има такъв */;Parameters)
+ {
+    //Първото извикване след инициализацията на класа отговаря на този конструктор 
+ }
+
+}
+
+
+//Main method
+static void Main(string[]args)
+{
+    //Инициализация на класа
+ <nameOfTheClass> name = new <nameOfTheClass>(/*Тук можеш да напишеш параметри за конструкторите*/)
+}
