@@ -1,10 +1,10 @@
-﻿namespace _5._Snake_Moves
+﻿namespace _02._ArrayCreator
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
