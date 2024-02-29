@@ -1,0 +1,34 @@
+Problem 1:
+
+Queue<int> textiles =
+    new(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+Stack<int> medicaments =
+    new(Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse));
+
+
+
+ Problem 2 :
+
+int[] NandM = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse)
+    .ToArray();
+
+ string[,] matrix = new string[NandM[0], NandM[1]];
+int currRow = -1;
+int currCol = -1;
+
+//Read Matrix
+for (int row = 0; row < NandM[0]; row++)
+{
+    string[]currentRow = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries).ToArray();
+    for (int col = 0; col < NandM[1]; col++)
+    {
+        matrix[row, col] = currentRow[col]>;
+        if (matrix[row, col] == " ")
+        {
+            currRow = row;
+            currCol = col;
+            matrix[row, col] = "-";
+            continue;
+        }
+    }
+}
